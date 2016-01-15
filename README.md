@@ -40,18 +40,18 @@ echo \Dreamhost\Api\Account::status();
 echo \Dreamhost\Api\Account::userUsage();
 ```
 
-### API Meta Commands
+### API Meta
 
 **List all commands this api key can run**
 
 ```php
-echo \Dreamhost\Api\ApiMetaCommand::listAccessibleCmds();
+echo \Dreamhost\Api\ApiMeta::listAccessibleCmds();
 ```
 
 **List all api keys**
 
 ```php
-echo \Dreamhost\Api\ApiMetaCommand::listKeys();
+echo \Dreamhost\Api\ApiMeta::listKeys();
 ```
 
 ### DNS
