@@ -117,31 +117,31 @@ echo \Dreamhost\Api\Mail::addFilter($filter);
 
 **List of all active MySQL Databases**
 
-```
+```php
 echo \Dreamhost\Api\MySQL::listDatabases();
 ```
 
 **List of all MySQL Hostnames**
 
-```
+```php
 echo \Dreamhost\Api\MySQL::listHostnames();
 ```
 
 **Add a MySQL Hostname**
 
-```
+```php
 echo \Dreamhost\Api\MySQL::addHostname('mysql.mydomain.xyz');
 ```
 
 **Remove a MySQL Hostname**
 
-```
+```php
 echo \Dreamhost\Api\MySQL::removeHostname('mysql.mydomain.xyz');
 ```
 
 **List of all users and their privileges**
 
-```
+```php
 echo \Dreamhost\Api\MySQL::listUsers();
 ```
 
