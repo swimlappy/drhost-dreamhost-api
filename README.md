@@ -1,6 +1,6 @@
 # About
 
-Dr.Host is a simple wrapper for [Dreamhost API][http://wiki.dreamy.com/API]. (Under development)
+Dr.Host is a simple wrapper for [Dreamhost API](http://wiki.dreamy.com/API). (Under development)
 
 ## Install
 
