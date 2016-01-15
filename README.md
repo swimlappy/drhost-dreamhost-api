@@ -1,6 +1,4 @@
-# A PHP wrapper for Dreamhost API
-
-A simple wrapper for Dreamhost API (Under development).
+# A simple wrapper for Dreamhost API (Under development).
 
 ## Install
 
