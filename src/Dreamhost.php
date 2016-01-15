@@ -83,12 +83,11 @@ class Dreamhost
         return in_array($format, self::$validOutputFormats);
     }
 
-    public static function __callStatic($method,$args=[])
+    public static function __callStatic($method, $args=[])
     {
         $className = ucwords($method);
 
-        if( ! class_exists(( $class = "Dreamhost\\Api\\$className")) )
-        {
+        if (! class_exists(($class = "Dreamhost\\Api\\$className"))) {
             throw new BadMethodCallException("{$method} not found");
         }
 
