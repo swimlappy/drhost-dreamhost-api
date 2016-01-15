@@ -8,7 +8,7 @@ namespace Dreamhost\Api;
  *
  * http://wiki.dreamhost.com/API/Api_commands
  */
-class ApiMetaCommand extends ApiResource
+class ApiMeta extends ApiResource
 {
     /**
      * Dump a list of all commands this API Key has access to

@@ -2,6 +2,6 @@
 
 require __DIR__ . '/helper.php';
 
-use Dreamhost\Api\ApiMetaCommand;
+use Dreamhost\Api\ApiMeta;
 
-echo ApiMetaCommand::listKeys()->body();
+echo ApiMeta::listKeys()->body();
