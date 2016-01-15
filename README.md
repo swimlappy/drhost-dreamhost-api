@@ -113,12 +113,46 @@ $filter = MailFilter::make()
 echo \Dreamhost\Api\Mail::addFilter($filter);
 ```
 
+### MySQL
+
+**List of all active MySQL Databases**
+
+```
+echo \Dreamhost\Api\MySQL::listDatabases();
+```
+
+**List of all MySQL Hostnames**
+
+```
+echo \Dreamhost\Api\MySQL::listHostnames();
+```
+
+**Add a MySQL Hostname**
+
+```
+echo \Dreamhost\Api\MySQL::addHostname('mysql.mydomain.xyz');
+```
+
+**Remove a MySQL Hostname**
+
+```
+echo \Dreamhost\Api\MySQL::removeHostname('mysql.mydomain.xyz');
+```
+
+**List of all users and their privileges**
+
+```
+echo \Dreamhost\Api\MySQL::listUsers();
+```
+
+
+
 ## Todo
 
 1. Announcement List Commands,
 1. DreamHost PS Commands,
 1. Jabber Commands,
-1. MySQL Commands,
+1. MySQL Commands (add and remove users),
 1. Rewards Commands
 1. Service Control Commands,
 1. User Commands
