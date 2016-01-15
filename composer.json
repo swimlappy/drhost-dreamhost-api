@@ -1,11 +1,11 @@
 {
-    "name": "eduardostuart/dreamhost-php-api",
-    "description": "A simple wrapper for Dreamhost API",
+    "name": "eduardostuart/drhost-dreamhost-api",
+    "description": "Dr.Host is a simple wrapper for Dreamhost API",
     "keywords": [
         "eduardostuart",
         "dreamhost"
     ],
-    "homepage": "https://github.com/eduardostuart/dreamhost-php-api",
+    "homepage": "https://github.com/eduardostuart/drhost-dreamhost-api",
     "license": "MIT",
     "authors": [
         {

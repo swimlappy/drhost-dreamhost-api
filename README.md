@@ -1,9 +1,11 @@
-# A simple wrapper for Dreamhost API (Under development).
+# About
+
+Dr.Host is a simple wrapper for [Dreamhost API][http://wiki.dreamy.com/API]. (Under development)
 
 ## Install
 
 ```
-composer require eduardostuart/dreamhost-php-api
+composer require eduardostuart/drhost-dreamhost-api
 ```
 
 ## Usage
@@ -122,6 +124,7 @@ echo \Dreamhost\Api\Mail::addFilter($filter);
 7. Service Control Commands,
 8. User Commands
 
+
 ## License
 
-Dreamhost API is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Dr.Host is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
