@@ -145,7 +145,14 @@ echo \Dreamhost\Api\MySQL::removeHostname('mysql.mydomain.xyz');
 echo \Dreamhost\Api\MySQL::listUsers();
 ```
 
+## Alternative way to run commands
 
+```
+echo \Dreamhost::account()->status();
+echo \Dreamhost::mysql()->listDatabases();
+echo \Dreamhost::dns()->listRecords();
+...
+```
 
 ## Todo
 

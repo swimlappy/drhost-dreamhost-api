@@ -2,6 +2,8 @@
 
 require __DIR__ . '/helper.php';
 
-use Dreamhost\Api\Account;
+use Dreamhost\Dreamhost;
 
-echo Account::status()->body();
+// echo Dreamhost::account()->status();
+
+// echo Account::status()->body();

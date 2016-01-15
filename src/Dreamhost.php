@@ -3,6 +3,7 @@
 namespace Dreamhost;
 
 use Dreamhost\Exceptions\InvalidOutputFormatException;
+use BadMethodCallException;
 
 class Dreamhost
 {
@@ -80,5 +81,17 @@ class Dreamhost
     public static function isValidOutputFormat($format)
     {
         return in_array($format, self::$validOutputFormats);
+    }
+
+    public static function __callStatic($method,$args=[])
+    {
+        $className = ucwords($method);
+
+        if( ! class_exists(( $class = "Dreamhost\\Api\\$className")) )
+        {
+            throw new BadMethodCallException("{$method} not found");
+        }
+
+        return new $class;
     }
 }
