@@ -1,0 +1,38 @@
+{
+    "name": "eduardostuart/dreamhost-php-api",
+    "description": "A simple wrapper for Dreamhost API",
+    "keywords": [
+        "eduardostuart",
+        "dreamhost"
+    ],
+    "homepage": "https://github.com/eduardostuart/dreamhost-php-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eduardo Stuart",
+            "homepage": "http://eduardostuart.com.br"
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "4.*",
+        "vlucas/phpdotenv":"^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dreamhost\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dreamhost\\Test\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
