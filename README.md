@@ -147,7 +147,7 @@ echo \Dreamhost\Api\MySQL::listUsers();
 
 ## Alternative way to run commands
 
-```
+```php
 echo \Dreamhost::account()->status();
 echo \Dreamhost::mysql()->listDatabases();
 echo \Dreamhost::dns()->listRecords();
