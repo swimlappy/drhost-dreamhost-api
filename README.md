@@ -115,14 +115,13 @@ echo \Dreamhost\Api\Mail::addFilter($filter);
 
 ## Todo
 
-1. Tests,
-2. Announcement List Commands,
-3. DreamHost PS Commands,
-4. Jabber Commands,
-5. MySQL Commands,
-6. Rewards Commands
-7. Service Control Commands,
-8. User Commands
+1. Announcement List Commands,
+1. DreamHost PS Commands,
+1. Jabber Commands,
+1. MySQL Commands,
+1. Rewards Commands
+1. Service Control Commands,
+1. User Commands
 
 
 ## License
