@@ -9,8 +9,6 @@ namespace Dreamhost\Api;
  */
 class MySQL extends ApiResource
 {
-
-
     public static $defaultHostname = '%.dreamhost.com';
 
     /**
@@ -79,16 +77,14 @@ class MySQL extends ApiResource
      * @param array  $permissions
      * @return Dreamhost\HttpClient\Response
      */
-    public static function addUser($database,$user,$password,$hostnames = [],$permissions = [])
+    public static function addUser($database, $user, $password, $hostnames = [], $permissions = [])
     {
-
-        if( count($hostnames) < 1 ){
+        if (count($hostnames) < 1) {
             $hostnameList = self::$defaultHostname;
         }
         // A newline separated list of hosts
-        else
-        {
-            $hostnameList = implode(PHP_EOL,$hostnames);
+        else {
+            $hostnameList = implode(PHP_EOL, $hostnames);
         }
 
         $params = array_merge([
@@ -100,7 +96,7 @@ class MySQL extends ApiResource
             self::preparePermissions($permissions)
         );
 
-        return parent::runCommand('mysql-add_user',$params);
+        return parent::runCommand('mysql-add_user', $params);
     }
 
     /**
@@ -111,9 +107,8 @@ class MySQL extends ApiResource
      * @param  array  $permissions
      * @return Dreamhost\HttpClient\Response
      */
-    public static function removeUser($database,$user,$permissions = [])
+    public static function removeUser($database, $user, $permissions = [])
     {
-
         $params = array_merge([
             'db'        => $database,
             'user'      => $user,
@@ -121,7 +116,7 @@ class MySQL extends ApiResource
             self::preparePermissions($permissions)
         );
 
-        return parent::runCommand('mysql-remove_user',$params);
+        return parent::runCommand('mysql-remove_user', $params);
     }
 
     /**
@@ -135,7 +130,6 @@ class MySQL extends ApiResource
      */
     protected static function preparePermissions(array $newPermissions = [])
     {
-
         $permissions = array_replace_recursive([
             'select' => true,
             'insert' => true,
@@ -145,13 +139,13 @@ class MySQL extends ApiResource
             'drop'   => true,
             'index'  => true,
             'alter'  => true,
-        ], $newPermissions );
+        ], $newPermissions);
 
-        return array_map(function($permission){
+        return array_map(function ($permission) {
 
             // Boolean format, we just check if it's true or false
             // then return Y or N
-            if( is_bool($permission) ){
+            if (is_bool($permission)) {
                 return $permission ? 'Y' : 'N';
             }
 
@@ -159,14 +153,13 @@ class MySQL extends ApiResource
 
             // If is not Y or N format, we return the
             // default value
-            if( ! in_array($permission,['Y','N']) ){
+            if (! in_array($permission, ['Y', 'N'])) {
                 return true;
             }
 
             // Okie dokie
             return $permission;
 
-        }, $permissions );
+        }, $permissions);
     }
-
 }
