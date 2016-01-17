@@ -168,7 +168,7 @@ $permissions = [
     'delete' => false
 ];
 
-echo \Dreamhost\Api\MySQL::removeUser('database-name','username','h4rdP4ss0wordYe4h', $permissions );
+echo \Dreamhost\Api\MySQL::removeUser('database-name','username', $permissions );
 ```
 
 
