@@ -145,6 +145,34 @@ echo \Dreamhost\Api\MySQL::removeHostname('mysql.mydomain.xyz');
 echo \Dreamhost\Api\MySQL::listUsers();
 ```
 
+**Add a new MySQL user to a database**
+
+```php
+// Hostname and permissions are optional
+// Default hostname is %.dreamhost.com
+
+$permissions = [
+    'select' => true,
+    'delete' => false
+];
+
+$hostnames = '%.mydomain.com';
+
+echo \Dreamhost\Api\MySQL::addUser('database-name','username','h4rdP4ss0wordYe4h',$hostnames,$permissions);
+```
+**Remove a MySQL user from a database**
+
+```php
+$permissions = [
+    'select' => true,
+    'delete' => false
+];
+
+echo \Dreamhost\Api\MySQL::removeUser('database-name','username','h4rdP4ss0wordYe4h', $permissions );
+```
+
+
+
 ## Alternative way to run commands
 
 ```php
@@ -159,7 +187,6 @@ echo \Dreamhost::dns()->listRecords();
 1. Announcement List Commands,
 1. DreamHost PS Commands,
 1. Jabber Commands,
-1. MySQL Commands (add and remove users),
 1. Rewards Commands
 1. Service Control Commands,
 1. User Commands

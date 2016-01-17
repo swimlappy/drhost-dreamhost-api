@@ -13,3 +13,7 @@ echo MySQL::listDatabases()->body();
 // echo MySQL::removeHostname('mysql.mydomain.xyz');
 
 // echo MySQL::listUsers();
+
+// echo MySQL::addUser('mydatabase','myuniqueuser','h4rdP4ss0wordYe4h');
+
+// echo MySQL::removeUser('mydatabase','myuniqueuser');
