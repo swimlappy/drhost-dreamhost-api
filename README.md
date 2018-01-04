@@ -93,6 +93,10 @@ echo \Dreamhost\Api\Domain::listRegistered();
 **Check if a domain name is available to be registered**
 *Must be a .com, .net, .org or .info domain*
 
+```php
+echo \Dreamhost\Api\Domain::registrationAvailable($domain);
+```
+
 
 ### Mail
 
