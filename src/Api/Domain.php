@@ -57,9 +57,9 @@ class Domain extends ApiResource
             throw new InvalidDomainNameException('Invalid sub-domain name specified');
         }
 
-		return parent::runCommand('domain-registration_available', [
+        return parent::runCommand('domain-registration_available', [
             'domain'  => $domain,
-		]);
+        ]);
 	}
 
     /**
@@ -69,8 +69,8 @@ class Domain extends ApiResource
      * @return boolean
      */
     public static function isValidTLD($domain) {
-		$values = explode(".", $domain);
-		$last = strtolower(end($values));
+        $values = explode(".", $domain);
+        $last = strtolower(end($values));
 
         return in_array($last, self::$validTLDS);
     }
@@ -82,10 +82,10 @@ class Domain extends ApiResource
      * @return boolean
      */
     public static function isValidDomain($domain) {
-		$values = explode(".", $domain);
+        $values = explode(".", $domain);
 
-		if (sizeof($values) > 2) { return false; }
+        if (sizeof($values) > 2) { return false; }
 
-		return true;
+        return true;
     }
 }
