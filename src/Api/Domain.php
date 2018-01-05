@@ -84,8 +84,6 @@ class Domain extends ApiResource
     public static function isValidDomain($domain) {
         $values = explode(".", $domain);
 
-        if (sizeof($values) > 2) { return false; }
-
-        return true;
+        return sizeof($values) == 1;
     }
 }
